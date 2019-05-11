@@ -1,7 +1,6 @@
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\bin\Debug\netstandard2.0\Databaze_Knih.deps.json
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\bin\Debug\netstandard2.0\Databaze_Knih.dll
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\bin\Debug\netstandard2.0\Databaze_Knih.pdb
-I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\obj\Debug\netstandard2.0\Databaze_Knih.csprojAssemblyReference.cache
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\obj\Debug\netstandard2.0\App.xaml.g.cs
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\obj\Debug\netstandard2.0\View\MainView.xaml.g.cs
@@ -11,3 +10,5 @@ I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\obj\Debug\netstandard
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\obj\Debug\netstandard2.0\XamlC.stamp
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\obj\Debug\netstandard2.0\Databaze_Knih.dll
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\obj\Debug\netstandard2.0\Databaze_Knih.pdb
+I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\obj\Debug\netstandard2.0\View\MainListView.xaml.g.cs
+I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\obj\Debug\netstandard2.0\Databaze_Knih.csprojAssemblyReference.cache

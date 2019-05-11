@@ -12,7 +12,7 @@ namespace Databaze_Knih
         {
             InitializeComponent();
 
-            MainPage = new MainView();
+            MainPage = new MainListView();
         }
 
         protected override void OnStart()
