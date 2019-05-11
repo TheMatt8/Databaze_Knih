@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Databaze_Knih.View;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Databaze_Knih
@@ -11,7 +12,7 @@ namespace Databaze_Knih
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MainView();
         }
 
         protected override void OnStart()
