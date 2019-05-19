@@ -55,3 +55,4 @@ I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.iOS\obj\iPhoneSimulat
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.iOS\obj\iPhoneSimulator\Debug\Databaze_Knih.iOS.csproj.CopyComplete
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.iOS\obj\iPhoneSimulator\Debug\Databaze_Knih.iOS.exe
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.iOS\obj\iPhoneSimulator\Debug\Databaze_Knih.iOS.pdb
+I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.iOS\bin\iPhoneSimulator\Debug\Databaze_Knih.dll.mdb
