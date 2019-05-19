@@ -7,8 +7,6 @@ using System.ComponentModel;
 
 namespace Databaze_Knih.Model
 {
-    class Knihy
-    {
         [Table("Knihy")]
         public class Kniha: INotifyPropertyChanged
         {
@@ -89,6 +87,18 @@ namespace Databaze_Knih.Model
                 }
             }
 
+            private int _id;
+            [AutoIncrement]
+            public int id
+            {
+                get { return _id; }
+                set
+                {
+                    _id = value;
+                    this.OnChangeProperty("ID");
+                }
+            }
+
             private void OnChangeProperty(string nazevVlastnosti)
             {
                 if (this.PropertyChanged != null)
@@ -99,5 +109,5 @@ namespace Databaze_Knih.Model
 
             public event PropertyChangedEventHandler PropertyChanged;
         }
-    }
+    
 }
