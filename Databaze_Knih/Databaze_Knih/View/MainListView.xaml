@@ -48,7 +48,8 @@
                     </x:Array>
                 </ListView.ItemsSource>
             </ListView>
-        </StackLayout>
+                <Button x:Name="Back" Command="" CommandParameter="" Text="Zpět na hlavní stránku"  Grid.Column="1"/>
+            </StackLayout>
         </ScrollView>
     </Grid>
 </ContentPage>

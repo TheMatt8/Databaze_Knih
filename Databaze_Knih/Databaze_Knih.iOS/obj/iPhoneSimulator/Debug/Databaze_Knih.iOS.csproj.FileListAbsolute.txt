@@ -55,4 +55,8 @@ I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.iOS\obj\iPhoneSimulat
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.iOS\obj\iPhoneSimulator\Debug\Databaze_Knih.iOS.csproj.CopyComplete
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.iOS\obj\iPhoneSimulator\Debug\Databaze_Knih.iOS.exe
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.iOS\obj\iPhoneSimulator\Debug\Databaze_Knih.iOS.pdb
-I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.iOS\bin\iPhoneSimulator\Debug\Databaze_Knih.dll.mdb
+I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.iOS\bin\iPhoneSimulator\Debug\SQLite-net.dll
+I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.iOS\bin\iPhoneSimulator\Debug\SQLitePCLRaw.batteries_green.dll
+I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.iOS\bin\iPhoneSimulator\Debug\SQLitePCLRaw.batteries_v2.dll
+I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.iOS\bin\iPhoneSimulator\Debug\SQLitePCLRaw.core.dll
+I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.iOS\bin\iPhoneSimulator\Debug\SQLitePCLRaw.provider.sqlite3.dll

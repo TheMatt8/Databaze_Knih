@@ -21,13 +21,11 @@
                 <Button x:Name="User" Command="" CommandParameter="" Text="Můj účet"  Grid.Column="1" Grid.ColumnSpan="2"/>
                 <Button x:Name="Set_Avatar" Command="" CommandParameter="" Text="Nastavit avatar"  Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1"/>
             </Grid>
-            <Button x:Name="All_Books" Command="" CommandParameter="" Text="Zobrazit všechny knihy"/>
+            <Button x:Name="All_Books" Command="{Binding Prejdi}" CommandParameter="" Text="Zobrazit všechny knihy"/>
+            <Button x:Name="Add_Book" Command="" CommandParameter="" Text="Přidat knihu"/>
             <ListView>
                 <ListView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
                         <x:String>Kniha</x:String>
                         <x:String>Kniha</x:String>
                     </x:Array>
