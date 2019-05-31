@@ -6,6 +6,7 @@ namespace Databaze_Knih.Model
 {
     public interface IDatabaze
     {
-        SQLite.SQLiteConnection dkNapojeni();
+        //SQLite.SQLiteAsyncConnection dkNapojeni();
+        string ZiskejCestu(string cesta);
     }
 }

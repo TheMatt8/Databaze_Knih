@@ -19,11 +19,9 @@ namespace Databaze_Knih.Droid
 {
     class Propojeni_Databaze : IDatabaze
     {
-        public SQLiteConnection dkNapojeni()
+        public string ZiskejCestu(string cesta)
         {
-            var jmeno_databaze = "Knihy.db3";
-            var cesta = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), jmeno_databaze);
-            return new SQLiteConnection(cesta);
+            return Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), cesta);
         }
     }
 }

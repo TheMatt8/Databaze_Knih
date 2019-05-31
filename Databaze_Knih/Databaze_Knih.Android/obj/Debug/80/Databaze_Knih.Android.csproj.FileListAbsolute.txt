@@ -102,4 +102,6 @@ I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.Android\obj\Debug\80\
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.Android\obj\Debug\80\android\assets\Xamarin.Forms.Core.pdb
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.Android\obj\Debug\80\android\assets\Xamarin.Forms.Platform.Android.pdb
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.Android\obj\Debug\80\android\assets\Xamarin.Forms.Xaml.pdb
+I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\bin\Debug\netstandard2.0\Databaze_Knih.dll
+I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.Android\bin\Debug\Databaze_Knih.dll.mdb
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih.Android\obj\Debug\80\linksrc\Databaze_Knih.dll.mdb

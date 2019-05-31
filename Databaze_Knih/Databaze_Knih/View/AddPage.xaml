@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Databaze_Knih.ViewModel"
+             x:Class="Databaze_Knih.View.AddPage"
+             BindingContext="{viewmodels:AddPageVM}">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand">
+            <Label Text="Databáze knih" FontSize="32" HorizontalTextAlignment="Center" Margin="20"/>
+            <Grid Padding="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label Text="Název"/>
+                <Entry Text="{Binding nazevKnihy}"  Grid.Column="1"/>
+                <Label Text="Autor" Grid.Row="1"/>
+                <Entry Text="{Binding autor}" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="Popis" Grid.Row="2"/>
+                <Entry Text="{Binding info}" Grid.Row="2" Grid.Column="1"/>
+                <Label Text="ISBN" Grid.Row="3"/>
+                <Entry Text="{Binding isbn}" Grid.Row="3" Grid.Column="1"/>
+            </Grid>
+            <Button x:Name="Add" Command="{Binding Add}" CommandParameter="" Text="Přidat knihu"/>
+            <Button x:Name="Back" Command="{Binding Prejdi}" CommandParameter="" Text="Zpět na hlavní stránku"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

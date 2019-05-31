@@ -22,14 +22,13 @@
                 <Button x:Name="Set_Avatar" Command="" CommandParameter="" Text="Nastavit avatar"  Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1"/>
             </Grid>
             <Button x:Name="All_Books" Command="{Binding Prejdi}" CommandParameter="" Text="Zobrazit všechny knihy"/>
-            <Button x:Name="Add_Book" Command="" CommandParameter="" Text="Přidat knihu"/>
-            <ListView>
-                <ListView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                    </x:Array>
-                </ListView.ItemsSource>
+            <Button x:Name="Add_Book" Command="{Binding Prejdi_Add}" CommandParameter="" Text="Přidat knihu"/>
+            <ListView ItemsSource="{Binding Path= databaze}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding nazevKnihy}" Detail="{Binding autor}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
     </ContentPage.Content>

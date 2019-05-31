@@ -6,7 +6,7 @@ using Databaze_Knih.View;
 
 namespace Databaze_Knih.ViewModel
 {
-    class ListViewVM : Abstract.Property
+    class ListViewVM
     {
         public ListViewVM()
         {
