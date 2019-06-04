@@ -49,6 +49,11 @@ namespace Databaze_Knih.Model
             databaze.CreateTableAsync<Kniha>().Wait();
         }
 
+        public Task<Kniha> Hledej(string hledani)
+        {
+            return databaze.FindWithQueryAsync<Kniha>("SELECT * FROM Item WHERE Autor = 'Hledani'");
+        }
+
     }
     
 }

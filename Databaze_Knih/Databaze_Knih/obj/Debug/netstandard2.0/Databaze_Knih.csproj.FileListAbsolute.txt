@@ -12,4 +12,3 @@ I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\bin\Debug\netstandard
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\obj\Debug\netstandard2.0\XamlC.stamp
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\obj\Debug\netstandard2.0\Databaze_Knih.dll
 I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\obj\Debug\netstandard2.0\Databaze_Knih.pdb
-I:\Škola\PRG P3\Databaze_Knih\Databaze_Knih\Databaze_Knih\obj\Debug\netstandard2.0\Databaze_Knih.csprojAssemblyReference.cache
