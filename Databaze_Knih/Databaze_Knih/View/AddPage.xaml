@@ -19,15 +19,15 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Label Text="Název"/>
-                <Entry Text="{Binding nazevKnihy}"  Grid.Column="1"/>
+                <Entry Text="{Binding NazevKnihy, Mode=TwoWay, UpdateSourceEventName=OnPropertyChanged}" Grid.Column="1"/>
                 <Label Text="Autor" Grid.Row="1"/>
-                <Entry Text="{Binding autor}" Grid.Row="1" Grid.Column="1"/>
+                <Entry Text="{Binding Autor, Mode=TwoWay, UpdateSourceEventName=OnPropertyChanged}" Grid.Row="1" Grid.Column="1"/>
                 <Label Text="Popis" Grid.Row="2"/>
-                <Entry Text="{Binding info}" Grid.Row="2" Grid.Column="1"/>
+                <Entry Text="{Binding Info, Mode=TwoWay, UpdateSourceEventName=OnPropertyChanged}" Grid.Row="2" Grid.Column="1"/>
                 <Label Text="ISBN" Grid.Row="3"/>
-                <Entry Text="{Binding isbn}" Grid.Row="3" Grid.Column="1"/>
+                <Entry Text="{Binding Isbn, Mode=TwoWay, UpdateSourceEventName=OnPropertyChanged}" Grid.Row="3" Grid.Column="1"/>
             </Grid>
-            <Button x:Name="Add" Command="{Binding Add}" CommandParameter="" Text="Přidat knihu"/>
+            <Button x:Name="Add" Command="{Binding Pridej}" CommandParameter="" Text="Přidat knihu"/>
             <Button x:Name="Back" Command="{Binding Prejdi}" CommandParameter="" Text="Zpět na hlavní stránku"/>
         </StackLayout>
     </ContentPage.Content>

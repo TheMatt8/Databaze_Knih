@@ -13,7 +13,7 @@ namespace Databaze_Knih.Model
     {
         readonly SQLiteAsyncConnection databaze;
 
-        public KnihyDatabaze (string cesta)
+        public KnihyDatabaze(string cesta)
         {
             databaze = new SQLiteAsyncConnection(cesta);
             databaze.CreateTableAsync<Kniha>().Wait();
@@ -26,21 +26,27 @@ namespace Databaze_Knih.Model
 
         public Task<Kniha> VratKnihu(int id_hledany)
         {
-            return databaze.Table<Kniha>().Where(i => i.id == id_hledany).FirstOrDefaultAsync();
+            return databaze.Table<Kniha>().Where(i => i.Id == id_hledany).FirstOrDefaultAsync();
         }
 
         public Task<int> UlozKnihy(Kniha kniha)
         {
-            if (kniha.id == 0)
+            if (kniha.Id == 0)
             {
                 return databaze.InsertAsync(kniha);
             }
             else { return databaze.UpdateAsync(kniha); }
         }
 
-        public Task<int> SmazKnihy(Kniha kniha)
+        public Task<int> SmazKnihu(Kniha kniha)
         {
             return databaze.DeleteAsync(kniha);
+        }
+
+        public void SmazKnihy()
+        {
+            databaze.DropTableAsync<Kniha>().Wait();
+            databaze.CreateTableAsync<Kniha>().Wait();
         }
 
     }

@@ -4,6 +4,7 @@ using System.Text;
 using System.ComponentModel;
 using Xamarin.Forms;
 using Databaze_Knih.View;
+using Databaze_Knih.Model;
 
 namespace Databaze_Knih.ViewModel
 {
@@ -13,94 +14,107 @@ namespace Databaze_Knih.ViewModel
 
         public AddPageVM()
         {
-            this.Add = new Command(this.Add_Execute);
+            data = new Model.Kniha();
+            this.Pridej = new Command(this.Add_Execute);
             this.Prejdi = new Command(this.Prejdi_Execute);
         }
 
-        public string nazevKnihy
+        public string NazevKnihy
         {
-            get { return data.nazevKnihy; }
+            get { return data.NazevKnihy; }
             set
             {
-                data.nazevKnihy = value;
+                data.NazevKnihy = value;
                 this.OnChangeProperty("Nazev");
             }
         }
 
-        public string autor
+        public string Autor
         {
-            get { return data.autor; }
+            get { return data.Autor; }
             set
             {
-                data.autor = value;
+                data.Autor = value;
                 this.OnChangeProperty("Autor");
             }
         }
 
         public string Info
         {
-            get { return data.info; }
+            get { return data.Info; }
             set
             {
-                data.info = value;
+                data.Info = value;
                 this.OnChangeProperty("Info");
             }
         }
 
-        public string isbn
+        public string Isbn
         {
-            get { return data.isbn; }
+            get { return data.Isbn; }
             set
             {
-                data.isbn = value;
+                data.Isbn = value;
                 this.OnChangeProperty("Isbn");
             }
         }
 
-        public string precteno
+        public string Precteno
         {
-            get { return data.precteno; }
+            get { return data.Precteno; }
             set
             {
-                data.precteno = value;
+                data.Precteno = value;
                 this.OnChangeProperty("Precteno");
             }
         }
 
-        public string chci
+        public string Chci
         {
-            get { return data.chci; }
+            get { return data.Chci; }
             set
             {
-                data.chci = value;
+                data.Chci = value;
                 this.OnChangeProperty("Chci");
             }
         }
 
-        public string obal
+        public string Obal
         {
-            get { return data.obal; }
+            get { return data.Obal; }
             set
             {
-                data.obal = value;
+                data.Obal = value;
                 this.OnChangeProperty("Obal");
             }
         }
 
-        public int id
+        public int Id
         {
-            get { return data.id; }
+            get { return data.Id; }
             set
             {
-                data.id = value;
-                this.OnChangeProperty("ID");
+                data.Id = value;
+                this.OnChangeProperty("Id");
             }
         }
 
-        public Command Add { get; private set; }
+        public Command Pridej { get; private set; }
 
         private void Add_Execute()
         {
+            App.Databaze.UlozKnihy(new Model.Kniha
+            {
+                NazevKnihy = NazevKnihy,
+                Autor = Autor,
+                Info = Info,
+                Isbn = Isbn,
+                Chci = "ne",
+                Precteno = "ne",
+                Obal = "",
+                Id = data.cislo
+            });
+            data.cislo++;
 
         }
         

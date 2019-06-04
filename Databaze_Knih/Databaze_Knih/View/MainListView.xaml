@@ -4,10 +4,8 @@
              xmlns:viewmodels="clr-namespace:Databaze_Knih.ViewModel"
              x:Class="Databaze_Knih.View.MainListView"
              BindingContext="{viewmodels:ListViewVM}">
-    <Grid>
-        <ScrollView>
+    <ScrollView>
         <StackLayout HorizontalOptions="FillAndExpand">
-            
             <Label Text="Databáze knih" FontSize="32" HorizontalTextAlignment="Center" Margin="20"/>
             <Grid Padding="20">
                 <Grid.ColumnDefinitions>
@@ -18,38 +16,18 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Button x:Name="Alphabetical" Command="" CommandParameter="" Text="Abecedně"  />
-                <Button x:Name="Added" Command="" CommandParameter="" Text="Podle přidání"  Grid.Column="1"/>
+                <Button x:Name="Alphabetical" Text="Abecedně"  />
+                <Button x:Name="Added" Text="Podle přidání"  Grid.Column="1"/>
                 <Entry x:Name="Search" Grid.Row="1" Grid.ColumnSpan="2"/>
             </Grid>
-            <ListView>
-                <ListView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                        <x:String>Kniha</x:String>
-                    </x:Array>
-                </ListView.ItemsSource>
+            <Button x:Name="Back" Command="{Binding Zpet}" CommandParameter="" Text="Zpět na hlavní stránku"/>
+            <ListView x:Name="Knihy">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding NazevKnihy}" Detail="{Binding Autor}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
-                <Button x:Name="Back" Command="{Binding Zpet}" CommandParameter="" Text="Zpět na hlavní stránku"  Grid.Column="1"/>
-            </StackLayout>
-        </ScrollView>
-    </Grid>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

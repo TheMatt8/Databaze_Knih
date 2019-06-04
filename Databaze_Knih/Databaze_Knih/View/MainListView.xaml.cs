@@ -16,5 +16,12 @@ namespace Databaze_Knih.View
 		{
 			InitializeComponent ();
 		}
-	}
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            Knizky.ItemsSource = await App.Databaze.VratKnihy();
+        }
+    }
 }

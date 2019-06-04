@@ -18,18 +18,12 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Image Source="pslib.jpg"/>
-                <Button x:Name="User" Command="" CommandParameter="" Text="Můj účet"  Grid.Column="1" Grid.ColumnSpan="2"/>
-                <Button x:Name="Set_Avatar" Command="" CommandParameter="" Text="Nastavit avatar"  Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1"/>
+                <Button x:Name="User" Text="Můj účet"  Grid.Column="1" Grid.ColumnSpan="2"/>
+                <Button x:Name="Set_Avatar" Text="Nastavit avatar"  Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1"/>
             </Grid>
-            <Button x:Name="All_Books" Command="{Binding Prejdi}" CommandParameter="" Text="Zobrazit všechny knihy"/>
-            <Button x:Name="Add_Book" Command="{Binding Prejdi_Add}" CommandParameter="" Text="Přidat knihu"/>
-            <ListView ItemsSource="{Binding Path= databaze}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextCell Text="{Binding nazevKnihy}" Detail="{Binding autor}" />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            <Button x:Name="All_Books" Command="{Binding Prejdi}" Text="Zobrazit všechny knihy"/>
+            <Button x:Name="Add_Book" Command="{Binding Prejdi_Add}" Text="Přidat knihu"/>
+            <Button x:Name="Delete_Database" Command="{Binding Delete}" Text="Smaž databázi"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

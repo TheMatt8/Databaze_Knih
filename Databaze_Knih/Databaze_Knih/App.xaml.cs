@@ -13,7 +13,6 @@ namespace Databaze_Knih
         public App()
         {
             InitializeComponent();
-
             MainPage = new MainView();
         }
 
@@ -26,6 +25,10 @@ namespace Databaze_Knih
                     databaze = new KnihyDatabaze(DependencyService.Get<IDatabaze>().ZiskejCestu("Knihy.db3"));
                 }
                 return databaze;
+            }
+            set
+            {
+                databaze = value;
             }
         }
 
