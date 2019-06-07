@@ -11,6 +11,7 @@ namespace Databaze_Knih.Model
 {
     public class KnihyDatabaze
     {
+        //metody databáze + její konstruktor
         readonly SQLiteAsyncConnection databaze;
 
         public KnihyDatabaze(string cesta)
@@ -22,11 +23,6 @@ namespace Databaze_Knih.Model
         public Task<List<Kniha>> VratKnihy()
         {
             return databaze.Table<Kniha>().ToListAsync();
-        }
-
-        public Task<Kniha> VratKnihu(int id_hledany)
-        {
-            return databaze.Table<Kniha>().Where(i => i.Id == id_hledany).FirstOrDefaultAsync();
         }
 
         public Task<int> UlozKnihy(Kniha kniha)
@@ -49,11 +45,20 @@ namespace Databaze_Knih.Model
             databaze.CreateTableAsync<Kniha>().Wait();
         }
 
-        public Task<Kniha> Hledej(string hledani)
+        public  Task<List<Kniha>> HA(string retezec)
         {
-            return databaze.FindWithQueryAsync<Kniha>("SELECT * FROM Item WHERE Autor = 'Hledani'");
+            return databaze.Table<Kniha>().Where(i => i.Autor == retezec).ToListAsync();
         }
 
+        public Task<List<Kniha>> HN(string retezec)
+        {
+            return databaze.Table<Kniha>().Where(i => i.NazevKnihy == retezec).ToListAsync();
+        }
+
+        public Task<Kniha> HNK(string retezec)
+        {
+            return databaze.Table<Kniha>().Where(i => i.NazevKnihy == retezec).FirstOrDefaultAsync();
+        }
     }
     
 }

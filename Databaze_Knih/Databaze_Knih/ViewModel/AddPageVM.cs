@@ -59,62 +59,19 @@ namespace Databaze_Knih.ViewModel
             }
         }
 
-        public string Precteno
-        {
-            get { return data.Precteno; }
-            set
-            {
-                data.Precteno = value;
-                this.OnChangeProperty("Precteno");
-            }
-        }
-
-        public string Chci
-        {
-            get { return data.Chci; }
-            set
-            {
-                data.Chci = value;
-                this.OnChangeProperty("Chci");
-            }
-        }
-
-        public string Obal
-        {
-            get { return data.Obal; }
-            set
-            {
-                data.Obal = value;
-                this.OnChangeProperty("Obal");
-            }
-        }
-
-        public int Id
-        {
-            get { return data.Id; }
-            set
-            {
-                data.Id = value;
-                this.OnChangeProperty("Id");
-            }
-        }
-
         public Command Pridej { get; private set; }
 
-        private void Add_Execute()
+        private async void Add_Execute()
         {
-            App.Databaze.UlozKnihy(new Model.Kniha
+            await App.Databaze.UlozKnihy(new Model.Kniha
             {
                 NazevKnihy = NazevKnihy,
                 Autor = Autor,
                 Info = Info,
-                Isbn = Isbn,
-                Chci = "ne",
-                Precteno = "ne",
-                Obal = "",
-                Id = data.cislo
+                Isbn = Isbn
             });
-            data.cislo++;
+            await App.Current.MainPage.DisplayAlert("Operace úspěšná", "Kniha byla přidána do databáze", "OK");
+            App.Current.MainPage = new NavigationPage(new MainView());
 
         }
         

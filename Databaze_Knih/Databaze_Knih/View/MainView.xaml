@@ -10,20 +10,16 @@
             <Grid Padding="20">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Image Source="pslib.jpg"/>
-                <Button x:Name="User" Text="Můj účet"  Grid.Column="1" Grid.ColumnSpan="2"/>
-                <Button x:Name="Set_Avatar" Text="Nastavit avatar"  Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1"/>
+                <Button x:Name="User" Text="Můj účet" Command="{Binding Profil}" />
+                <Button x:Name="Delete_Database" Command="{Binding Delete}" Text="Smaž databázi" Grid.Row="1"/>
             </Grid>
             <Button x:Name="All_Books" Command="{Binding Prejdi}" Text="Zobrazit všechny knihy"/>
             <Button x:Name="Add_Book" Command="{Binding Prejdi_Add}" Text="Přidat knihu"/>
-            <Button x:Name="Delete_Database" Command="{Binding Delete}" Text="Smaž databázi"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Databaze_Knih.ViewModel"
+             x:Class="Databaze_Knih.View.AccountPage"
+             BindingContext="{viewmodels:AccountPageVM}">
+    <ScrollView>
+        <StackLayout HorizontalOptions="FillAndExpand">
+            <Label Text="Databáze knih" FontSize="32" HorizontalTextAlignment="Center" Margin="20"/>
+            <Button x:Name="Back" Command="{Binding Prejdi}" Text="Zpět na hlavní stránku"/>
+            <Grid Padding="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Entry x:Name="Add1" Text="{Binding HledanyVyraz1, Mode=TwoWay, UpdateSourceEventName=OnChangeProperty}" />
+                <Entry x:Name="Add" Text="{Binding HledanyVyraz, Mode=TwoWay, UpdateSourceEventName=OnChangeProperty}" Grid.Column="1"/>
+                <Button x:Name="kniha" Command="{Binding Pridej1}" Text="Přidat" Grid.Row="1"/>
+                <Button x:Name="kniha1" Command="{Binding Pridej}" Text="Přidat" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
+            <Grid Padding="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label Text="Chci číst" HorizontalTextAlignment="Center" Margin="10"/>
+                <ListView x:Name="Chcicist" Grid.Row="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding NazevKnihy}" Detail="{Binding Autor}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Label Text="Přečteno" HorizontalTextAlignment="Center" Margin="10" Grid.Column="1"/>
+                <ListView x:Name="Prectenomam" Grid.Row="1" Grid.Column="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding NazevKnihy}" Detail="{Binding Autor}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

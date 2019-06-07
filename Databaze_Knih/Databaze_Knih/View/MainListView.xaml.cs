@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Databaze_Knih.ViewModel;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -22,6 +23,7 @@ namespace Databaze_Knih.View
             base.OnAppearing();
 
             Knizky.ItemsSource = await App.Databaze.VratKnihy();
+
         }
     }
 }

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Databaze_Knih.ViewModel"
+             x:Class="Databaze_Knih.View.NewList"
+             BindingContext="{viewmodels:NewListVM}">
+    <ScrollView>
+        <StackLayout HorizontalOptions="FillAndExpand">
+            <Label Text="Databáze knih" FontSize="32" HorizontalTextAlignment="Center" Margin="20"/>
+            <Grid Padding="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Button x:Name="All" Text="Všechny" Command="{Binding Vse}" Grid.Row="0" Grid.ColumnSpan="2"/>
+            </Grid>
+            <ListView x:Name="Knizky">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding NazevKnihy}" Detail="{Binding Autor}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="Back" Command="{Binding Zpet}" CommandParameter="" Text="Zpět na hlavní stránku"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -11,14 +11,17 @@ namespace Databaze_Knih.ViewModel
     class MainViewVM
     {
         Model.Kniha data;
+        //Konstruktor
         public MainViewVM()
         {
             data = new Kniha();            
             this.Prejdi = new Command(this.Prejdi_Execute);
             this.Prejdi_Add = new Command(this.Prejdi_Add_Execute);
             this.Delete = new Command(this.Delete_Execute);
+            this.Profil = new Command(this.Profil_Execute);
         }
 
+        //Skok na list s databází
         public Command Prejdi { get; private set; }
 
         private void Prejdi_Execute()
@@ -26,13 +29,24 @@ namespace Databaze_Knih.ViewModel
             App.Current.MainPage = new NavigationPage(new MainListView());
         }
 
-        public Command Delete { get; private set; }
+        //Skok na profil s listy
+        public Command Profil { get; private set; }
 
-        private void Delete_Execute()
+        private void Profil_Execute()
         {
-            App.Databaze.SmazKnihy();
+            App.Current.MainPage = new NavigationPage(new AccountPage());
         }
 
+        //Smazání celé databáze
+        public Command Delete { get; private set; }
+
+        private async void Delete_Execute()
+        {
+            App.Databaze.SmazKnihy();
+            await App.Current.MainPage.DisplayAlert("Operace úspěšná", "Databáze je nyní krásně čistá", "OK");
+        }
+
+        //Skok na stránku pro přidání knihy
         public Command Prejdi_Add { get; private set; }
 
         private void Prejdi_Add_Execute()

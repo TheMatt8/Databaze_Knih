@@ -5,6 +5,8 @@ using Xamarin.Forms;
 using Databaze_Knih.View;
 using Databaze_Knih.Model;
 using System.ComponentModel;
+using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace Databaze_Knih.ViewModel
 {
@@ -15,85 +17,19 @@ namespace Databaze_Knih.ViewModel
         {
             data = new Model.Kniha();
             this.Zpet = new Command(this.Zpet_Execute);
+            this.HA = new Command(this.HA_Execute);
+            this.HN = new Command(this.HN_Execute);
         }
 
-        public string NazevKnihy
+        //String pro hledání knihy
+        public string hledanyVyraz = "";
+        public string HledanyVyraz
         {
-            get { return data.NazevKnihy; }
+            get { return hledanyVyraz; }
             set
             {
-                data.NazevKnihy = value;
-                this.OnChangeProperty("Nazev");
-            }
-        }
-
-        public string Autor
-        {
-            get { return data.Autor; }
-            set
-            {
-                data.Autor = value;
-                this.OnChangeProperty("Autor");
-            }
-        }
-
-        public string Info
-        {
-            get { return data.Info; }
-            set
-            {
-                data.Info = value;
-                this.OnChangeProperty("Info");
-            }
-        }
-
-        public string Isbn
-        {
-            get { return data.Isbn; }
-            set
-            {
-                data.Isbn = value;
-                this.OnChangeProperty("Isbn");
-            }
-        }
-
-        public string Precteno
-        {
-            get { return data.Precteno; }
-            set
-            {
-                data.Precteno = value;
-                this.OnChangeProperty("Precteno");
-            }
-        }
-
-        public string Chci
-        {
-            get { return data.Chci; }
-            set
-            {
-                data.Chci = value;
-                this.OnChangeProperty("Chci");
-            }
-        }
-
-        public string Obal
-        {
-            get { return data.Obal; }
-            set
-            {
-                data.Obal = value;
-                this.OnChangeProperty("Obal");
-            }
-        }
-
-        public int Id
-        {
-            get { return data.Id; }
-            set
-            {
-                data.Id = value;
-                this.OnChangeProperty("Id");
+                hledanyVyraz = value;
+                this.OnChangeProperty("HledanyVyraz");
             }
         }
 
@@ -102,6 +38,21 @@ namespace Databaze_Knih.ViewModel
         private void Zpet_Execute()
         {
             App.Current.MainPage = new NavigationPage(new MainView());
+        }
+
+        public Command HA { get; private set; }
+
+        private async void HA_Execute()
+        {
+            App.List = await App.Databaze.HA(HledanyVyraz);
+            App.Current.MainPage = new NavigationPage(new NewList());
+        }
+        public Command HN { get; private set; }
+
+        private async void HN_Execute()
+        {
+            App.List = await App.Databaze.HN(HledanyVyraz);
+            App.Current.MainPage = new NavigationPage(new NewList());
         }
 
         private void OnChangeProperty(string nazevVlastnosti)

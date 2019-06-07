@@ -15,12 +15,12 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Button x:Name="Alphabetical" Text="Abecedně"  />
-                <Button x:Name="Added" Text="Podle přidání"  Grid.Column="1"/>
-                <Entry x:Name="Search" Grid.Row="1" Grid.ColumnSpan="2"/>
+                <Button x:Name="Name" Command="{Binding HN}" Text="Hledej název" Grid.Row="1"/>
+                <Button x:Name="Autor" Command="{Binding HA}" Text="Hledej autora" Grid.Row="1" Grid.Column="1"/>
+                <Entry x:Name="Search" Text="{Binding HledanyVyraz, Mode=TwoWay, UpdateSourceEventName=OnChangeProperty}" Grid.ColumnSpan="2"/>
             </Grid>
-            <Button x:Name="Back" Command="{Binding Zpet}" CommandParameter="" Text="Zpět na hlavní stránku"/>
             <ListView x:Name="Knizky">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -28,6 +28,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Button x:Name="Back" Command="{Binding Zpet}" CommandParameter="" Text="Zpět na hlavní stránku"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
